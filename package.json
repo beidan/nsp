@@ -4,9 +4,6 @@
   "description": "微信小程序命令行工具",
   "main": "index.js",
   "scripts": {
-    "nsp": "node ./bin/index.js",
-    "precommit": "./hooks/pre-commit.js",
-    "prepush": "./hooks/pre-push"
   },
   "bin": {
     "nsp": "./bin/index.js"
