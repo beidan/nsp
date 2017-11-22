@@ -19,56 +19,6 @@ program
 
 program
     .usage('[command] [options]')
-    .command('module [moduleName]')
-    .description('新建模块')
-    .action((moduleName) => {
-
-        //判断目录是否正确
-        isCorrect();
-
-        if (!moduleName) {
-            console.log(chalk.red(' 请输入你的模块名称~ '));
-            return program.help();
-        }
-
-        var questions = [
-            {
-                type: 'input',
-                name: 'des',
-                message: '这个页面是做什么的？'
-                // default: '' //设置默认值
-            }
-        ];
-
-        inquirer.prompt(questions).then((answers, input)=> {
-
-
-
-            var pageName = 'index1';
-
-            console.log(answers.des);
-            console.log(input)
-
-            var targetPath = path.join(process.cwd(), 'pages/');
-            var Path = targetPath + pageName;
-
-            if (fs.existsSync(path)) {
-                console.log(chalk.red('该项目已存在，换个名字试试？'))
-            }
-
-            creatApp(Path, pageName)
-
-        })
-
-    }).on('--help', function () {
-    console.log('  Examples:');
-    console.log('');
-    console.log('    $ sml init');
-    console.log();
-})
-
-program
-    .usage('[command] [options]')
     .command('page [pageName]')
     .alias('pa')
     .description('新建页面')
@@ -98,8 +48,8 @@ program
     }).on('--help', function () {
     console.log('  Examples:');
     console.log('');
-    console.log('    $ new page index');
-    console.log('    $ new pa index');
+    console.log('    $ nsp page index');
+    console.log('    $ nsp pa index');
     console.log();
 });
 

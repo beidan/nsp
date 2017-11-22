@@ -1,16 +1,6 @@
 {
   "pages": [
-    "pages/index/index/index",
-    "pages/index/search/search",
-    "pages/index/writing/writing",
-    "pages/index/suces/suces",
-    "pages/account/new_team/new_team",
-    "pages/account/team/team",
-    "pages/account/edit/edit",
-    "pages/account/teamDetail/teamDetail",
-    "pages/account/user/user",
-    "pages/account/editTeam/editTeam",
-    "pages/account/login/login",
+    "pages/index/index"
   ],
   "window": {
     "backgroundColor": "#f7f7f7",

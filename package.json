@@ -1,11 +1,12 @@
 {
   "name": "wxap-init",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "微信小程序命令行工具",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "nsp": "node ./bin/index.js"
+    "nsp": "node ./bin/index.js",
+    "precommit": "./hooks/pre-commit.js",
+    "prepush": "./hooks/pre-push"
   },
   "bin": {
     "nsp": "./bin/index.js"
@@ -15,6 +16,13 @@
     "commander": "^2.9.0",
     "inquirer": "^3.3.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beidan/nsp"
+  },
   "author": "beidan",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
+  }
 }
